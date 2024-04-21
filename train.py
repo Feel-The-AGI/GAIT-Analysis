@@ -22,10 +22,10 @@ data_transform = transforms.Compose([
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 ])
 
-train_dataset = datasets.ImageFolder(root='path_to_train_data', transform=data_transform)
+train_dataset = datasets.ImageFolder(root='OUR_TRAINING_DATA_PATH', transform=data_transform)
 train_loader = DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=True)
 
-test_dataset = datasets.ImageFolder(root='path_to_test_data', transform=data_transform)
+test_dataset = datasets.ImageFolder(root='OUR_TEST_DATA_PATH', transform=data_transform)
 test_loader = DataLoader(dataset=test_dataset, batch_size=batch_size, shuffle=False)
 
 # CNN Model Definition
