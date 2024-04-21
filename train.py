@@ -10,7 +10,7 @@ import os
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Parameters
-num_classes = 10  # Update with the actual number of classes
+num_classes = 10  # i will update this with the actual number of classes
 batch_size = 32
 learning_rate = 0.001
 num_epochs = 10
