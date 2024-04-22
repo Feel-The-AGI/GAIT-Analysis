@@ -1,0 +1,133 @@
+  File "C:\Users\gaitl\anaconda3\envs\gaitlab\Lib\site-packages\tensorflow\python\eager\polymorphic_function\atomic_function(gaitlab) PS C:\Users\gaitl\OneDrive\Desktop\gait> python .\gait.py
+2024-04-22 15:45:29.318670: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-04-22 15:45:30.180484: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+No GPU available, using CPU instead.
+Found 380 files belonging to 3 classes.
+2024-04-22 15:45:31.857799: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Found 376 files belonging to 1 classes.
+C:\Users\gaitl\anaconda3\envs\gaitlab\Lib\site-packages\keras\src\layers\convolutional\base_conv.py:99: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(
+Epoch 1/5
+12/12 ━━━━━━━━━━━━━━━━━━━━ 27s 2s/step - accuracy: 0.5574 - loss: 57.5792 - val_accuracy: 0.0000e+00 - val_loss: 39.2360
+Epoch 2/5
+12/12 ━━━━━━━━━━━━━━━━━━━━ 26s 2s/step - accuracy: 0.9484 - loss: 0.3467 - val_accuracy: 0.0000e+00 - val_loss: 17.6583
+Epoch 3/5
+12/12 ━━━━━━━━━━━━━━━━━━━━ 26s 2s/step - accuracy: 1.0000 - loss: 2.1657e-04 - val_accuracy: 0.0000e+00 - val_loss: 21.2626
+Epoch 4/5
+12/12 ━━━━━━━━━━━━━━━━━━━━ 25s 2s/step - accuracy: 1.0000 - loss: 1.3152e-04 - val_accuracy: 0.0186 - val_loss: 16.2342
+Epoch 5/5
+12/12 ━━━━━━━━━━━━━━━━━━━━ 25s 2s/step - accuracy: 1.0000 - loss: 5.9501e-05 - val_accuracy: 0.0239 - val_loss: 15.8408
+12/12 ━━━━━━━━━━━━━━━━━━━━ 2s 186ms/step - accuracy: 0.0514 - loss: 14.1432
+Accuracy of the network on the test images: 2.39%
+(gaitlab) PS C:\Users\gaitl\OneDrive\Desktop\gait> python .\gait.py
+2024-04-22 15:47:51.232410: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-04-22 15:47:52.041010: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+No GPU available, using CPU instead.
+Found 380 files belonging to 3 classes.
+2024-04-22 15:47:53.610520: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Found 376 files belonging to 1 classes.
+C:\Users\gaitl\anaconda3\envs\gaitlab\Lib\site-packages\keras\src\layers\convolutional\base_conv.py:99: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(
+Epoch 1/10
+12/12 ━━━━━━━━━━━━━━━━━━━━ 26s 2s/step - accuracy: 0.4926 - loss: 59.4695 - val_accuracy: 0.0053 - val_loss: 25.8000
+Epoch 2/10
+12/12 ━━━━━━━━━━━━━━━━━━━━ 25s 2s/step - accuracy: 0.9409 - loss: 0.3261 - val_accuracy: 0.0053 - val_loss: 40.6887
+Epoch 3/10
+12/12 ━━━━━━━━━━━━━━━━━━━━ 25s 2s/step - accuracy: 1.0000 - loss: 5.6855e-07 - val_accuracy: 0.0665 - val_loss: 29.7438
+Epoch 4/10
+12/12 ━━━━━━━━━━━━━━━━━━━━ 24s 2s/step - accuracy: 1.0000 - loss: 1.4006e-05 - val_accuracy: 0.0053 - val_loss: 44.5057
+Epoch 5/10
+12/12 ━━━━━━━━━━━━━━━━━━━━ 25s 2s/step - accuracy: 1.0000 - loss: 2.6301e-07 - val_accuracy: 0.0000e+00 - val_loss: 71.0913
+Epoch 6/10
+12/12 ━━━━━━━━━━━━━━━━━━━━ 25s 2s/step - accuracy: 1.0000 - loss: 0.0018 - val_accuracy: 0.1064 - val_loss: 25.7316
+Epoch 7/10
+12/12 ━━━━━━━━━━━━━━━━━━━━ 25s 2s/step - accuracy: 0.9973 - loss: 0.0075 - val_accuracy: 0.0053 - val_loss: 51.8468
+Epoch 8/10
+12/12 ━━━━━━━━━━━━━━━━━━━━ 24s 2s/step - accuracy: 0.9978 - loss: 0.0132 - val_accuracy: 0.0213 - val_loss: 34.2414
+Epoch 9/10
+12/12 ━━━━━━━━━━━━━━━━━━━━ 25s 2s/step - accuracy: 1.0000 - loss: 7.7366e-08 - val_accuracy: 0.0479 - val_loss: 28.1514
+Epoch 10/10
+12/12 ━━━━━━━━━━━━━━━━━━━━ 25s 2s/step - accuracy: 1.0000 - loss: 1.2522e-06 - val_accuracy: 0.0612 - val_loss: 26.7696
+12/12 ━━━━━━━━━━━━━━━━━━━━ 2s 167ms/step - accuracy: 0.1299 - loss: 23.7134
+Accuracy of the network on the test images: 6.12%
+(gaitlab) PS C:\Users\gaitl\OneDrive\Desktop\gait> 
+
+
+
+  flat_outputs = self.call_flat(*args)
+(gaitlab) PS C:\Users\gaitl\OneDrive\Desktop\gait> python .\gait.py
+2024-04-22 17:08:48.997956: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-04-22 17:08:49.821216: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+No GPU available, using CPU instead.
+Found 380 files belonging to 3 classes.
+2024-04-22 17:08:51.646042: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Found 376 files belonging to 1 classes.
+C:\Users\gaitl\anaconda3\envs\gaitlab\Lib\site-packages\keras\src\layers\convolutional\base_conv.py:99: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(
+Epoch 1/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 12s 6s/step - accuracy: 0.1570 - loss: 52.5239 - val_accuracy: 0.0000e+00 - val_loss: 413.2636
+Epoch 2/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 11s 5s/step - accuracy: 0.6053 - loss: 65.5910 - val_accuracy: 0.2606 - val_loss: 11.4276
+Epoch 3/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 10s 5s/step - accuracy: 0.8514 - loss: 2.5381 - val_accuracy: 0.0000e+00 - val_loss: 50.6989
+Epoch 4/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 11s 5s/step - accuracy: 0.8431 - loss: 11.0227 - val_accuracy: 0.0399 - val_loss: 38.4321
+Epoch 5/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 11s 5s/step - accuracy: 0.9306 - loss: 3.0339 - val_accuracy: 0.0372 - val_loss: 49.5486
+Epoch 6/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 11s 6s/step - accuracy: 0.9939 - loss: 0.2555 - val_accuracy: 0.0027 - val_loss: 84.1948
+Epoch 7/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 10s 5s/step - accuracy: 0.9777 - loss: 0.7806 - val_accuracy: 0.0000e+00 - val_loss: 128.9952
+Epoch 8/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 11s 5s/step - accuracy: 0.9830 - loss: 0.5100 - val_accuracy: 0.0000e+00 - val_loss: 159.9481
+Epoch 9/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 11s 6s/step - accuracy: 0.9878 - loss: 0.0570 - val_accuracy: 0.0000e+00 - val_loss: 148.9852
+Epoch 10/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 11s 5s/step - accuracy: 0.9969 - loss: 0.1298 - val_accuracy: 0.0027 - val_loss: 132.4535
+2/2 ━━━━━━━━━━━━━━━━━━━━ 2s 553ms/step - accuracy: 0.0031 - loss: 126.1857
+Accuracy of the network on the test images: 0.27%
+(gaitlab) PS C:\Users\gaitl\OneDrive\Desktop\gait> 
+
+
+
+
+(gaitlab) PS C:\Users\gaitl\OneDrive\Desktop\gait> python .\gait.py
+2024-04-22 17:35:05.294229: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-04-22 17:35:07.163616: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+No GPU available, using CPU instead.
+Directory C:/Users/gaitl/OneDrive/Desktop/gait/dataset/2D_Silhouettes/0000\training\camid0_videoid2 already exists. Skipping copy to prevent duplication.
+Directory C:/Users/gaitl/OneDrive/Desktop/gait/dataset/2D_Silhouettes/0000\training\camid3_videoid2 already exists. Skipping copy to prevent duplication.
+Directory C:/Users/gaitl/OneDrive/Desktop/gait/dataset/2D_Silhouettes/0000\training\camid9_videoid2 already exists. Skipping copy to prevent duplication.
+Directory C:/Users/gaitl/OneDrive/Desktop/gait/dataset/2D_Silhouettes/0000\testing\camid11_videoid2 already exists. Skipping copy to prevent duplication.
+Found 380 files belonging to 3 classes.
+2024-04-22 17:35:11.120865: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Found 376 files belonging to 1 classes.
+C:\Users\gaitl\anaconda3\envs\gaitlab\Lib\site-packages\keras\src\layers\convolutional\base_conv.py:99: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(
+Epoch 1/10
+6/6 ━━━━━━━━━━━━━━━━━━━━ 15s 2s/step - accuracy: 0.4640 - loss: 61.6008 - val_accuracy: 0.0000e+00 - val_loss: 49.1666
+Epoch 2/10
+6/6 ━━━━━━━━━━━━━━━━━━━━ 14s 2s/step - accuracy: 0.8825 - loss: 1.7243 - val_accuracy: 0.3191 - val_loss: 7.5658
+Epoch 3/10
+6/6 ━━━━━━━━━━━━━━━━━━━━ 14s 2s/step - accuracy: 0.9489 - loss: 0.3530 - val_accuracy: 0.0505 - val_loss: 13.2627
+Epoch 4/10
+6/6 ━━━━━━━━━━━━━━━━━━━━ 14s 2s/step - accuracy: 1.0000 - loss: 3.5359e-04 - val_accuracy: 0.0133 - val_loss: 17.1999
+Epoch 5/10
+6/6 ━━━━━━━━━━━━━━━━━━━━ 14s 2s/step - accuracy: 1.0000 - loss: 8.7325e-04 - val_accuracy: 0.0213 - val_loss: 15.6489
+Epoch 6/10
+6/6 ━━━━━━━━━━━━━━━━━━━━ 14s 2s/step - accuracy: 1.0000 - loss: 2.3539e-04 - val_accuracy: 0.0532 - val_loss: 11.9938
+Epoch 7/10
+6/6 ━━━━━━━━━━━━━━━━━━━━ 14s 2s/step - accuracy: 1.0000 - loss: 0.0022 - val_accuracy: 0.0000e+00 - val_loss: 26.3438
+Epoch 8/10
+6/6 ━━━━━━━━━━━━━━━━━━━━ 14s 2s/step - accuracy: 1.0000 - loss: 8.5547e-05 - val_accuracy: 0.1090 - val_loss: 10.2442
+Epoch 9/10
+6/6 ━━━━━━━━━━━━━━━━━━━━ 14s 2s/step - accuracy: 0.9942 - loss: 0.0062 - val_accuracy: 0.0000e+00 - val_loss: 32.9201
+Epoch 10/10
+6/6 ━━━━━━━━━━━━━━━━━━━━ 14s 2s/step - accuracy: 1.0000 - loss: 0.0029 - val_accuracy: 0.1888 - val_loss: 8.9727
+6/6 ━━━━━━━━━━━━━━━━━━━━ 2s 264ms/step - accuracy: 0.2121 - loss: 8.5084
+Accuracy of the network on the test images: 18.88%
+(gaitlab) PS C:\Users\gaitl\OneDrive\Desktop\gait> 
