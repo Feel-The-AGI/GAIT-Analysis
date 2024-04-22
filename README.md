@@ -18,4 +18,6 @@ We've developed an open-source codebase that offers various pre-training models 
 
 - [Github Repository](https://github.com/Gait3D/Gait3D-Benchmark)
 
+- [2D Dataset | G-Drive](https://drive.google.com/drive/folders/1HcU7Cy0HQAyZ5cX9VjkQKwX_dbmHRgBv?usp=share_link)
+
 Feel free to explore the codebase and utilize the pre-trained models for your gait analysis tasks.
