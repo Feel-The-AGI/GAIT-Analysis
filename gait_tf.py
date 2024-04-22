@@ -1,3 +1,5 @@
+import os
+import shutil
 import tensorflow as tf
 from tensorflow.keras import layers, models, optimizers, losses
 
@@ -6,7 +8,7 @@ gpus = tf.config.experimental.list_physical_devices('GPU')
 if gpus:
     try:
         # Set the GPU to use
-        tf.config.set_visible_devices(gpus[1], 'GPU')  # Replace with gpus[0] if you want to use the first GPU
+        tf.config.set_visible_devices(gpus[0], 'GPU')  # Replace with gpus[0] if you want to use the first GPU
 
         # Set memory growth
         for gpu in gpus:
@@ -19,15 +21,43 @@ else:
     print("No GPU available, using CPU instead.")
 
 # Parameters
-batch_size = 256
+batch_size = 32
 learning_rate = 0.001
 num_epochs = 10
 image_size = (256, 256)
-num_classes = 25  # Adjust this as needed
+num_classes = 10  # Adjust this as needed
 
-# Define the training and testing directories
-train_dir = "C:/Users/gaitl/OneDrive/Desktop/gait/dataset/2D_Silhouettes/0000/training"
-test_dir = "C:/Users/gaitl/OneDrive/Desktop/gait/dataset/2D_Silhouettes/0000/testing"
+# Define the base directory and training/testing directories based on base directory
+base_dir = "C:/Users/gaitl/OneDrive/Desktop/gait/dataset/2D_Silhouettes/0000"
+train_dir = os.path.join(base_dir, 'training')
+test_dir = os.path.join(base_dir, 'testing')
+
+# List of camera IDs for training and testing
+train_camids = ['camid0_videoid2', 'camid3_videoid2', 'camid9_videoid2']
+test_camids = ['camid11_videoid2']
+
+# Ensure the directories for training and testing exist
+os.makedirs(train_dir, exist_ok=True)
+os.makedirs(test_dir, exist_ok=True)
+
+# Function to copy the specified camid folders into the training/testing directories
+def copy_folders(camid_list, destination):
+    for camid in camid_list:
+        src_path = os.path.join(base_dir, camid)
+        dst_path = os.path.join(destination, camid)
+        if os.path.exists(dst_path):
+            print(f"Directory {dst_path} already exists. Skipping copy to prevent duplication.")
+            continue
+        try:
+            shutil.copytree(src_path, dst_path)
+            print(f"Copied {src_path} to {dst_path}")
+        except Exception as e:
+            print(f"Failed to copy {src_path} to {dst_path}: {str(e)}")
+
+# Copy the folders
+copy_folders(train_camids, train_dir)
+copy_folders(test_camids, test_dir)
+
 
 # Preprocessing function
 def preprocess_image(image, label):
@@ -66,8 +96,8 @@ model = models.Sequential([
     layers.Conv2D(64, kernel_size=3, padding='same', activation='relu'),
     layers.MaxPooling2D(pool_size=(2, 2)),
     layers.Flatten(),
-    layers.Dense(1000, activation='relu'),
-    layers.Dense(num_classes)
+    layers.Dense(1000, activation='sigmoid'),
+    layers.Dense(num_classes, activation='sigmoid')
 ])
 
 # Compile the model
