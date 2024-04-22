@@ -2,6 +2,7 @@ import os
 import shutil
 import tensorflow as tf
 from tensorflow.keras import layers, models, optimizers, losses
+from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping
 
 # Check GPU availability and set memory growth
 gpus = tf.config.experimental.list_physical_devices('GPU')
@@ -89,24 +90,31 @@ test_dataset = tf.keras.preprocessing.image_dataset_from_directory(
     image_size=image_size,
     shuffle=False).map(preprocess_image, num_parallel_calls=tf.data.experimental.AUTOTUNE)
 
-# CNN Model Definition
+# Adding Dropout in the CNN Model
 model = models.Sequential([
     layers.Conv2D(32, kernel_size=3, padding='same', activation='relu', input_shape=(256, 256, 3)),
     layers.MaxPooling2D(pool_size=(2, 2)),
+    layers.Dropout(0.25),  # Dropout layer after pooling
     layers.Conv2D(64, kernel_size=3, padding='same', activation='relu'),
     layers.MaxPooling2D(pool_size=(2, 2)),
+    layers.Dropout(0.25),  # Another Dropout layer
     layers.Flatten(),
     layers.Dense(1000, activation='relu'),
+    layers.Dropout(0.5),  # Dropout before the final layer
     layers.Dense(num_classes)
 ])
 
-# Compile the model
-model.compile(optimizer=optimizers.Adam(learning_rate=learning_rate),
-              loss=losses.SparseCategoricalCrossentropy(from_logits=True),
-              metrics=['accuracy'])
+# Callbacks
+checkpoint_callback = ModelCheckpoint(filepath='best_model.h5', save_best_only=True, monitor='val_loss', mode='min')
+early_stopping_callback = EarlyStopping(monitor='val_loss', patience=5)
 
-# Training the model
-history = model.fit(train_dataset, epochs=num_epochs, validation_data=test_dataset)
+# Training the model with callbacks
+history = model.fit(
+    train_dataset, 
+    epochs=num_epochs, 
+    validation_data=test_dataset, 
+    callbacks=[checkpoint_callback, early_stopping_callback]
+)
 
 # Testing the model
 test_loss, test_acc = model.evaluate(test_dataset)
