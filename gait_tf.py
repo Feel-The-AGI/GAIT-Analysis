@@ -104,8 +104,13 @@ model = models.Sequential([
     layers.Dense(num_classes)
 ])
 
+# Compile the model
+model.compile(optimizer=optimizers.Adam(learning_rate=learning_rate),
+              loss=losses.SparseCategoricalCrossentropy(from_logits=True),
+              metrics=['accuracy'])
+
 # Callbacks
-checkpoint_callback = ModelCheckpoint(filepath='best_model.h5', save_best_only=True, monitor='val_loss', mode='min')
+checkpoint_callback = ModelCheckpoint(filepath='best_model.keras', save_best_only=True, monitor='val_loss', mode='min')
 early_stopping_callback = EarlyStopping(monitor='val_loss', patience=5)
 
 # Training the model with callbacks
