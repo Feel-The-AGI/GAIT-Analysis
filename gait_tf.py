@@ -21,11 +21,11 @@ else:
     print("No GPU available, using CPU instead.")
 
 # Parameters
-batch_size = 32
+batch_size = 64
 learning_rate = 0.001
-num_epochs = 10
+num_epochs = 5
 image_size = (256, 256)
-num_classes = 10  # Adjust this as needed
+num_classes = 3  # Adjust this as needed
 
 # Define the base directory and training/testing directories based on base directory
 base_dir = "C:/Users/gaitl/OneDrive/Desktop/gait/dataset/2D_Silhouettes/0000"
@@ -96,8 +96,8 @@ model = models.Sequential([
     layers.Conv2D(64, kernel_size=3, padding='same', activation='relu'),
     layers.MaxPooling2D(pool_size=(2, 2)),
     layers.Flatten(),
-    layers.Dense(1000, activation='sigmoid'),
-    layers.Dense(num_classes, activation='sigmoid')
+    layers.Dense(1000, activation='relu'),
+    layers.Dense(num_classes)
 ])
 
 # Compile the model
